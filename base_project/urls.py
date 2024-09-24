@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from rangoebrasa import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),            # ROTA PARA O ADMIN DO SISTEMA
+    path('', views.dashborad, name='home'),        # ROTA PARA O DASHBOARD
 ]

@@ -1,0 +1,166 @@
+{% extends 'rangoebrasa/base.html' %}
+{% block conteudo %}
+
+<!--   INFORMACOES EMPRESA  -->
+<div class="p-5 mb-4 bg-light rounded-4 text-center">
+
+    <img src="https://avatars.githubusercontent.com/u/95659704?v=4"
+       alt="logo"
+       class="rounded-circle"
+    />
+
+  <h1>Rango e Brasa</h1>
+
+  <span>Rua 10, Chapecó - SC</span>
+
+  <div>
+      <span>Pedidos até às 11h</span>
+  </div>
+</div>
+<!--   FIM INFORMACOES EMPRESA  -->
+
+
+<!--  INICIO CARDAPIO  -->
+
+<div class="p-5 mb-4 bg-light rounded-4 text-center">
+    <h2 class="mb-3">CARDÁPIO DO DIA</h2>
+
+      <img src="https://avatars.githubusercontent.com/u/95659704?v=4"
+           alt="Marmita"
+           class="rounded-circle mb-5"
+      />
+
+    <div>
+
+      {% for dado in dados %}
+
+        <p>{{ dado.description }}</p>
+
+      {% endfor %}
+
+    </div>
+</div>
+<!-- FIM CARDAPIO  -->
+
+
+<!--  INICIO CARDAPIO CARNES -->
+<div class="p-5 mb-4 bg-light rounded-4">
+
+    <!-- INICIO ROW -->
+    <div class="row">
+
+        <!--  INICIO COLUNA  -->
+        <div class="col-lg-6 col-sm-12">
+          <h2 class="mb-4">CARNES</h2>
+
+          <div class="form-check">
+            <input class="form-check-input me-2" type="radio" name="flexRadioDefault" id="carne1">
+            <label class="form-check-label" for="flexRadioDefault1">BIFE SIMPLES</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input me-2" type="radio" name="flexRadioDefault" id="carne2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">BIFE ACEBOLADO</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input me-2" type="radio" name="flexRadioDefault" id="carne3" checked>
+            <label class="form-check-label" for="flexRadioDefault3">BIFE AO GORGONZOLA</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input me-2" type="radio" name="flexRadioDefault" id="carne4" checked>
+            <label class="form-check-label" for="flexRadioDefault4">BIFE A MILANESA</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input me-2" type="radio" name="flexRadioDefault" id="carne5" checked>
+            <label class="form-check-label" for="flexRadioDefault5">BIFE A PARMEGIANA</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input me-2" type="radio" name="flexRadioDefault" id="carne6" checked>
+            <label class="form-check-label" for="flexRadioDefault6">FRANGO A MILANESA</label>
+          </div>
+        </div>
+        <!--  FIM COLUNA  -->
+
+        <!--  INICIO COLUNA  -->
+        <div class="col-lg-6 col-sm-12">
+            <h2 class="mb-4">ADICIONAIS</h2>
+
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="add1">
+              <label class="form-check-label" for="add1">Salada R$1,50</label>
+            </div>
+
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="add2">
+              <label class="form-check-label" for="add2">Ovo frito R$2,00</label>
+            </div>
+
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="add3">
+              <label class="form-check-label" for="add3">Bife simples R$6,00</label>
+            </div>
+
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="add4">
+              <label class="form-check-label" for="add4">Bife acebolado R$7,00</label>
+            </div>
+
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="add5">
+              <label class="form-check-label" for="add5">Bife ao gorgonzola R$7,00</label>
+            </div>
+
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="add6">
+              <label class="form-check-label" for="add6">Bife a milanesa R$8,00</label>
+            </div>
+
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="add7">
+              <label class="form-check-label" for="add7">Bife a parmegiana R$9,00</label>
+            </div>
+        </div>
+        <!--  FIM COLUNA  -->
+
+        <!--  INICIO COLUNA  -->
+        <div class="col-lg-6 col-sm-12">
+            <h2 class="mb-4">BEBIDAS</h2>
+
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="beb1">
+              <label class="form-check-label" for="beb1">Coca 1.5L R$11,00</label>
+            </div>
+
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="beb2">
+              <label class="form-check-label" for="beb2">Refri 600ml (Ver opções) R$7,00</label>
+            </div>
+
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="beb3">
+              <label class="form-check-label" for="beb3">Lata (Ver opções) R$5,00</label>
+            </div>
+
+        </div>
+        <!--  FIM COLUNA  -->
+
+    </div>
+    <!-- FIM ROW -->
+
+</div>
+<!--  FIM CARDAPIO CARNES -->
+
+<!--INICIO OBS-->
+<div class="p-5 mb-4 bg-light rounded-4 text-center">
+
+    <input class="form-control mb-4" type="text" id="obs" placeholder="Observações"/>
+
+    <button class="btn btn-outline-success" type="submit">Confirmar</button>
+</div>
+<!--FIM OBS-->
+
+{% endblock %}
